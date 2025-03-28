@@ -1,0 +1,38 @@
+def optellen(x, y):
+    return x + y
+
+def aftrekken(x, y):
+    return x - y
+
+def vermenigvuldigen(x, y):
+    return x * y
+
+def delen(x, y):
+    if y == 0:
+        return "Kan niet delen door nul!"
+    return x / y
+
+print("Selecteer een optie:")
+print("1. Optellen")
+print("2. Aftrekken")
+print("3. Vermenigvuldigen")
+print("4. Delen")
+
+keuze = input("Voer het nummer van de optie in (1/2/3/4): ")
+
+try:
+    num1 = float(input("Voer het eerste getal in: "))
+    num2 = float(input("Voer het tweede getal in: "))
+    
+    if keuze == '1':
+        print("Resultaat:", optellen(num1, num2))
+    elif keuze == '2':
+        print("Resultaat:", aftrekken(num1, num2))
+    elif keuze == '3':
+        print("Resultaat:", vermenigvuldigen(num1, num2))
+    elif keuze == '4':
+        print("Resultaat:", delen(num1, num2))
+    else:
+        print("Geen geldige invoer!")
+except ValueError:
+    print("Geen geldige invoer, voer alleen nummers in.")
